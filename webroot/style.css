@@ -1,0 +1,161 @@
+:root {
+  --primary-color: #6b7280;
+  --background-color: #031e55;
+  --text-color: #374151;
+  --accent-color: #60a5fa;
+  --border-radius: 6px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  max-width: 650px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.3;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+#username,
+#counter {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* New button container */
+.button-container {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  box-shadow: var(--shadow);
+  margin: 0;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#btn-decrease {
+  background-color: var(--primary-color);
+}
+
+pre {
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  border: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #000000;
+}
+
+.midi-pad-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  gap: 10px; /* Space between pads */
+  width: 80%; /* Adjust width as needed */
+}
+
+.midi-pad {
+  height: 100px; /* Fixed height for pads */
+  width: 100px; /* Fixed width for pads */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+  color: gray; /* Change text color to gray */
+  background-color: black; /* Pad color */
+  transition: transform 0.1s, box-shadow 0.2s, background-color 0.3s; /* Add transition for shadow and background */
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.7); /* Red shadow effect */
+}
+
+.midi-pad:active {
+  background-color: grey; /* Change color to grey when pressed */
+}
+
+.midi-pad:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+#timer {
+  margin-top: 20px; /* Space above the timer */
+  font-size: 36px; /* Timer font size */
+  color: black; /* Timer text color */
+}
