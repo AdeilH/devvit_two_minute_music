@@ -1,6 +1,6 @@
 # Two Minute Music
 
-![Interface](./webroot/Interface.png)
+![Interface](https://github.com/AdeilH/devvit_two_minute_music/blob/main/webroot/Interface.png)
 
 ## Basic Instructions
 
